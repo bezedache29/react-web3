@@ -1,0 +1,212 @@
+$color-dark-mode:#262934;
+$color-light-mode: #EEEEEE;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200&family=Lato:wght@300&family=Montserrat:wght@500&family=Open+Sans:wght@300;500&family=Outfit:wght@100&family=Roboto:ital,wght@0,300;1,100;1,300&display=swap');
+$main-color: #23abd4;
+$roboto-font: 'Roboto', sans-serif;
+$color-light-mode: #EEEEEE;
+.main-container{
+  width: auto;
+  height: auto;
+}
+
+
+/* CSS reset. */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+// 100VH height & 100vw width
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// SCSS
+
+.main-container{
+    background-color: $color-dark-mode;
+    font-family: $roboto-font;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & a{
+        color: white;
+      }
+    
+    & p{
+        color: white;
+    }
+    & h1, h2, h3, h4, h5{
+        color: white;
+    }
+    & button {
+        font-family: $roboto-font;
+    }
+}
+
+.title-color{
+    color: $main-color;
+}
+
+.title{
+    font-size: 4em;
+}
+
+.header{
+    padding-bottom: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.link{
+    border: solid 1px black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+.link:hover{
+    color: black;
+    background-color: $main-color;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nav-link{
+  text-decoration: none;
+  border: solid 2px black;
+  height: 3em;
+  width: 8em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.nav-link:hover{
+  cursor: pointer;
+  background-color: $main-color;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+
+// Btn toggle darkmode
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: $color-dark-mode;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px $color-dark-mode;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+//Dark Mode
+
+.main-container-dark{
+  background-color: $color-light-mode;
+  font-family: $roboto-font;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+
+  & a{
+      color: black;
+    }
+  
+  & p{
+      color: black;
+  }
+  & h1, h2, h3, h4, h5{
+      color: black;
+  }
+  & button {
+      font-family: $roboto-font;
+      color: black;
+  }
+}
